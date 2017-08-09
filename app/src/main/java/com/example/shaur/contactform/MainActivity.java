@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
@@ -26,6 +27,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        final ImageView vi = (ImageView) findViewById(R.id.emoji);
+
+        RatingBar rating = (RatingBar) findViewById(R.id.rating);
+        rating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+
+                if(v==5.0)
+                {
+                   vi.setImageResource(R.drawable.smile);
+                }
+                else if(v==4.0)
+                {
+                    vi.setImageResource(R.drawable.smiling);
+                }
+                else if(v==3.0)
+                {
+                    vi.setImageResource(R.drawable.ok);
+                }
+                else if(v==2.0)
+                {
+                    vi.setImageResource(R.drawable.sad);
+                }
+                else
+                {
+                    vi.setImageResource(R.drawable.cry);
+                }
+            }
+        });
 
         //Send button Listener
          Button submit = (Button) findViewById(R.id.sendbutton);
@@ -55,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 message="#Name ->"+Sname+"\n"+"#Subject -> "+Ssubject+"\n"+"#Message ->\n"+body+"\n#Rating Given by "+Sname+" "+rating+" Stars";
+
 
                 Log.v("Email",message);
 
@@ -86,5 +118,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
