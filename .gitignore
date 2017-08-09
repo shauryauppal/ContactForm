@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Built application files
 *.apk
 *.ap_
@@ -53,3 +54,14 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+=======
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+>>>>>>> A Contact form that send intent message to email apps like gmail/inbox it also has few not null validations and has EditText with Rating bar
