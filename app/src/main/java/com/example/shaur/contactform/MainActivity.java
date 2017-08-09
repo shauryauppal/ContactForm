@@ -12,13 +12,6 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
-import static android.R.attr.name;
-import static android.R.id.message;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
-import static android.webkit.WebSettings.PluginState.ON;
-import static com.example.shaur.contactform.R.id.body;
-import static com.example.shaur.contactform.R.id.subject;
-
 public class MainActivity extends AppCompatActivity {
 
 
@@ -86,10 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 message="#Name ->"+Sname+"\n"+"#Subject -> "+Ssubject+"\n"+"#Message ->\n"+body+"\n#Rating Given by "+Sname+" "+rating+" Stars";
-
-
-                Log.v("Email",message);
-
+                
 
                 String[] address = {"shauryauppal00111@gmail.com","bsaraansh@gmail.com"};
 
